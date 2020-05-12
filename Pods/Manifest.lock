@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (5.0.0-rc.2)
+  - AlamofireObjectMapper (6.2.0):
+    - Alamofire (= 5.0.0-rc.2)
+    - ObjectMapper (~> 3.5.1)
+  - ObjectMapper (3.5.1)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - ObjectMapper
+  - SDWebImage
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireObjectMapper
+    - ObjectMapper
+    - SDWebImage
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
+  AlamofireObjectMapper: 74d1440c92c42bbcc2b5f4dc81654ac095ec669f
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 0b8cbbd64847eec7f6b9f906f3b41dcc405d5124
+
+COCOAPODS: 1.8.4

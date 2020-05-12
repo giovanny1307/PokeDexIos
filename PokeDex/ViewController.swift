@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var ds:PokemonDataService?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        Pokemon.listPokemons(offset: 0) { (pokemons, error) in
+            if let err = error {
+                
+            }
+            
+        }
     }
 
 
