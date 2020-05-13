@@ -43,8 +43,11 @@ class PokemonCell: UITableViewCell {
     }
     
     func configureCell() {
-        self.namePokemon.text = pokemon?.name!
-        self.idPokemon.text = "# \(pokemon!.getId())"
+        
+        guard let name = pokemon?.name, let id = pokemon?.getId() else {return}
+        
+        self.namePokemon.text = name.capitalized
+        self.idPokemon.text = "# \(id)"
         
         setupImage(photoUrl: pokemon?.spriteFrontDefault)
         setTypeImages()

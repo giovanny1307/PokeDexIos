@@ -7,6 +7,11 @@
 //
 
 import Foundation
-protocol ViewControllerProtocol {
-    func getPokemons(_ pokemons:[Pokemon])
+protocol ViewControllerProtocol:class {
+    func getPokemons(_ pokemons:[Pokemon], isFromSearchQuery: Bool)
+    func showLoader()
+    func hideLoader()
+    func showReloadButton()
+    func hideReloadButton()
+    func showError(_ error:String)
 }

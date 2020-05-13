@@ -29,6 +29,7 @@
 		9DEC113E246B16D10088C8D2 /* PokemonDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEC113D246B16D10088C8D2 /* PokemonDataService.swift */; };
 		9DFF51C6246C4A94003A139A /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFF51C4246C4A94003A139A /* PokemonCell.swift */; };
 		9DFF51C7246C4A94003A139A /* PokemonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DFF51C5246C4A94003A139A /* PokemonCell.xib */; };
+		9DFF51C9246C5A47003A139A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFF51C8246C5A47003A139A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		9DEC113D246B16D10088C8D2 /* PokemonDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDataService.swift; sourceTree = "<group>"; };
 		9DFF51C4246C4A94003A139A /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		9DFF51C5246C4A94003A139A /* PokemonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonCell.xib; sourceTree = "<group>"; };
+		9DFF51C8246C5A47003A139A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A5DF36A7824EDE6E4447A793 /* Pods-PokeDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex.release.xcconfig"; path = "Target Support Files/Pods-PokeDex/Pods-PokeDex.release.xcconfig"; sourceTree = "<group>"; };
 		ACB6F0FCBE6A17EA8F3604E7 /* Pods-PokeDex-PokeDexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex-PokeDexUITests.debug.xcconfig"; path = "Target Support Files/Pods-PokeDex-PokeDexUITests/Pods-PokeDex-PokeDexUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEB7FB63B6DA1A24DF4DD600 /* Pods-PokeDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex.debug.xcconfig"; path = "Target Support Files/Pods-PokeDex/Pods-PokeDex.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				9DB044CC246B03400044D33C /* LaunchScreen.storyboard */,
 				9DDE5840246B67DF00660709 /* Main.storyboard */,
 				9DB044CF246B03400044D33C /* Info.plist */,
+				9DFF51C8246C5A47003A139A /* Extensions.swift */,
 			);
 			path = PokeDex;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				9DEC113E246B16D10088C8D2 /* PokemonDataService.swift in Sources */,
 				9DB044C4246B033B0044D33C /* SceneDelegate.swift in Sources */,
 				9DDE583D246B3A3A00660709 /* Pokemon.swift in Sources */,
+				9DFF51C9246C5A47003A139A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

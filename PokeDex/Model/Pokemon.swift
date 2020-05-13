@@ -109,7 +109,6 @@ class Pokemon:Mappable {
         PokemonDataService.request(url).validate().responseObject { (response:DataResponse<Pokemon,AFError>) in
             
             if let error = response.error?.errorDescription {
-                print(error)
                 complete(nil,error)
                 return
             }

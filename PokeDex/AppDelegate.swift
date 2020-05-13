@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        //configureMainRootViewController()
+    
+        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.gradient)
         return true
     }
 
@@ -34,22 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    func configureMainRootViewController() {
-        let vc = ViewController()
-        
-        let name = "Pokemon"
-        
-        let navVc = UINavigationController(rootViewController: vc)
-        vc.navigationItem.title = name
-        navVc.tabBarItem.title = name
-        
-        let tabVc = UITabBarController()
-        tabVc.viewControllers = [navVc]
-        
-        window = UIWindow()
-        window?.makeKeyAndVisible()
-        window?.rootViewController = UIViewController()
-    }
+
 
 
 }
