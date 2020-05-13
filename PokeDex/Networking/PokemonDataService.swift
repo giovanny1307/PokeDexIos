@@ -18,15 +18,15 @@ class PokemonDataService {
     }
     
     @discardableResult
-    class func request(_ path: String,
+    class func request(_ url: String,
                        method: HTTPMethod = .get,
                        parameters: Parameters? = nil,
                        headers: HTTPHeaders? = nil,
                        encoder: ParameterEncoding = JSONEncoding.default) -> DataRequest {
         
-        let finalUrl = ApiPaths.rootUrl+path
+     
         
-        return AF.request(finalUrl,
+        return AF.request(url,
                           method: method,
                           parameters: parameters,
                           encoding: encoder,

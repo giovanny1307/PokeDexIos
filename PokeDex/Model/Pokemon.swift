@@ -15,12 +15,51 @@ class Pokemon:Mappable {
     
     var name:String?
     var urlDetail:String?
+    var id:Int?
     
     required convenience init?(map: Map) { self.init() }
     
     func mapping(map: Map) {
         name <- map["name"]
         urlDetail <- map["url"]
+        id <- map["id"]
+    }
+    
+    func getId() -> Int {
+        var myId = 0
+        
+        if let id = self.id {
+            myId = id
+        }
+        
+        if let urlDet = self.urlDetail {
+            let comp = urlDet.components(separatedBy: "/")
+            myId = Int(comp[6]) ?? 0
+        }
+        
+        return myId
+    }
+    
+    class func getPokemonByName(_ searchName:String, complete:@escaping(Pokemon?,String?) -> Void) {
+        
+        let url = "\(ApiPaths.pokemons)/\(searchName)"
+        
+        PokemonDataService.request(url).validate().responseObject { (response:DataResponse<Pokemon,AFError>) in
+            
+            if let error = response.error?.errorDescription {
+                               print(error)
+                              
+                                   complete(nil,error)
+                               
+                               return
+                           }
+            
+            if let pokemon = response.value {
+                
+            }
+            
+        }
+        
     }
     
     

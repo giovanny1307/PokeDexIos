@@ -10,19 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var ds:PokemonDataService?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Pokemon.listPokemons(offset: 0) { (pokemons, error) in
+    }
+
+}
+
+
+/**
+ 
+ 
+ Pokemon.getPokemonByName("ditto") { (pokes, err) in
+          
+      }
+      
+ 
+ Pokemon.listPokemons(offset: 0) { (pokemons, error) in
             if let err = error {
                 
             }
             
         }
-    }
-
-
-}
+ */
 
