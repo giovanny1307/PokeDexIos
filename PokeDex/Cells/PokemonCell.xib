@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="KGk-i7-Jjw" customClass="PokemonCell" customModule="PokeDex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jJp-2K-XXd">
+                        <rect key="frame" x="12" y="8" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="1jp-yB-ymw"/>
+                            <constraint firstAttribute="width" secondItem="jJp-2K-XXd" secondAttribute="height" multiplier="1:1" id="25Z-Vn-U0l"/>
+                            <constraint firstAttribute="width" constant="70" id="8El-cR-adz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5v-vS-Eci">
+                        <rect key="frame" x="86" y="20" width="146" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUr-XH-vcx">
+                        <rect key="frame" x="86" y="45" width="146" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t_bug_s" translatesAutoresizingMaskIntoConstraints="NO" id="4OG-37-WMO">
+                        <rect key="frame" x="272" y="23" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="C8d-7J-8gb"/>
+                            <constraint firstAttribute="height" constant="40" id="wbT-Zg-jPi"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t_dark_s" translatesAutoresizingMaskIntoConstraints="NO" id="YYh-hO-pYR">
+                        <rect key="frame" x="232" y="23" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="0tu-Ct-kNr"/>
+                            <constraint firstAttribute="width" constant="40" id="Smi-r8-SpZ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="n5v-vS-Eci" firstAttribute="leading" secondItem="jJp-2K-XXd" secondAttribute="trailing" constant="4" id="2L4-xY-hHG"/>
+                    <constraint firstItem="YYh-hO-pYR" firstAttribute="leading" secondItem="n5v-vS-Eci" secondAttribute="trailing" id="6Yj-Xk-WOU"/>
+                    <constraint firstItem="jJp-2K-XXd" firstAttribute="top" secondItem="n5v-vS-Eci" secondAttribute="bottom" constant="-33" id="A1u-cV-zZb"/>
+                    <constraint firstItem="jJp-2K-XXd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="AYs-0M-p7z"/>
+                    <constraint firstItem="jJp-2K-XXd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Cp9-Pr-NGQ"/>
+                    <constraint firstItem="CUr-XH-vcx" firstAttribute="trailing" secondItem="n5v-vS-Eci" secondAttribute="trailing" id="HXk-Lo-pTK"/>
+                    <constraint firstItem="CUr-XH-vcx" firstAttribute="leading" secondItem="n5v-vS-Eci" secondAttribute="leading" id="UuP-AL-zCu"/>
+                    <constraint firstItem="jJp-2K-XXd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="WMb-oX-6Yu"/>
+                    <constraint firstItem="CUr-XH-vcx" firstAttribute="top" secondItem="n5v-vS-Eci" secondAttribute="bottom" constant="4" id="cno-Q4-YF1"/>
+                    <constraint firstItem="4OG-37-WMO" firstAttribute="leading" secondItem="YYh-hO-pYR" secondAttribute="trailing" id="jDR-Tl-obs"/>
+                    <constraint firstAttribute="trailing" secondItem="4OG-37-WMO" secondAttribute="trailing" constant="8" id="qGn-lh-7ZL"/>
+                    <constraint firstItem="YYh-hO-pYR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="t7F-Ui-3SR"/>
+                    <constraint firstItem="4OG-37-WMO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tuf-Wo-gCe"/>
+                    <constraint firstAttribute="bottom" secondItem="jJp-2K-XXd" secondAttribute="bottom" constant="8" id="x3l-GJ-w5p"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="idPokemon" destination="CUr-XH-vcx" id="OMW-h0-BB3"/>
+                <outlet property="imageViewPokemon" destination="jJp-2K-XXd" id="0d7-h4-qBO"/>
+                <outlet property="namePokemon" destination="n5v-vS-Eci" id="xpb-tQ-7uZ"/>
+                <outlet property="type1Pokemon" destination="4OG-37-WMO" id="SyD-Ko-efn"/>
+                <outlet property="type2Pokemon" destination="YYh-hO-pYR" id="fv2-og-Fty"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="72.65625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="t_bug_s" width="60" height="60"/>
+        <image name="t_dark_s" width="60" height="60"/>
+    </resources>
+</document>

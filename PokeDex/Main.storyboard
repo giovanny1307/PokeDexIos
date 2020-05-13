@@ -14,10 +14,25 @@
                     <view key="view" contentMode="scaleToFill" id="MNK-Ts-Oev">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lib-TZ-LpP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Lib-TZ-LpP" firstAttribute="leading" secondItem="i7t-td-bjF" secondAttribute="leading" id="84P-0P-SHf"/>
+                            <constraint firstItem="Lib-TZ-LpP" firstAttribute="top" secondItem="i7t-td-bjF" secondAttribute="top" id="kze-cU-zXk"/>
+                            <constraint firstItem="Lib-TZ-LpP" firstAttribute="trailing" secondItem="i7t-td-bjF" secondAttribute="trailing" id="q2u-dP-dip"/>
+                            <constraint firstAttribute="bottom" secondItem="Lib-TZ-LpP" secondAttribute="bottom" id="zPR-S8-rZs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="i7t-td-bjF"/>
                     </view>
                     <navigationItem key="navigationItem" title="Pokemon" id="GeW-D4-1vX"/>
+                    <connections>
+                        <outlet property="tableView" destination="Lib-TZ-LpP" id="m97-UM-7x2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wcd-x2-l6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,6 +63,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="A5v-D4-2Wd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="pokemon" id="RBa-p2-wU7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

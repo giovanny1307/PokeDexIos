@@ -14,13 +14,24 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="cYS-40-gPV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cYS-40-gPV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5BC-RX-HfV"/>
+                            <constraint firstItem="cYS-40-gPV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MT3-yp-6Dv"/>
+                            <constraint firstAttribute="bottom" secondItem="cYS-40-gPV" secondAttribute="bottom" id="SvK-21-LmJ"/>
+                            <constraint firstItem="cYS-40-gPV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="X1v-1s-tgX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uhp-28-IHk">
@@ -38,4 +49,7 @@
             <point key="canvasLocation" x="911" y="370"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash" width="375" height="812"/>
+    </resources>
 </document>
