@@ -11,6 +11,11 @@ import SVProgressHUD
 
 class ViewController: UIViewController {
     
+    enum Segues {
+         static let toStats = "toDetail"
+     }
+     
+    
     var pokemons = [Pokemon]()
     let cellIdentifier = "pokemonTableViewCell"
     
