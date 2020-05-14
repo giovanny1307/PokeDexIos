@@ -33,11 +33,11 @@ class ViewController: UIViewController {
         configureReloadButton()
         hideNavBarButton()
         configurePresenter()
-        
+        presenter?.loadData()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        presenter?.loadData()
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func configurePresenter(){
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         
         tableView.register(UINib(nibName: "PokemonCell", bundle: Bundle.main), forCellReuseIdentifier: cellIdentifier)
         tableView.estimatedRowHeight = 83
-        tableView.allowsSelection = false
+        tableView.allowsSelection = true
         tableView.separatorStyle = .singleLine
     }
     
@@ -98,6 +98,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.pokemon = pokemon
         presenter?.callNextPage(indexPath.row)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        SeguesTool.goToDetailVc(pokemons[indexPath.row], self)
     }
 }
 

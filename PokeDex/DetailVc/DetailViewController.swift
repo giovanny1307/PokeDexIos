@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
     
@@ -14,13 +15,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var labelNamePokemon: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var containerView: UIView!
     
     lazy var statsIsLoaded = false
     lazy var evoIsLoaded = false
     lazy var movesIsLoaded = false
     
-    
+    var pokemon:Pokemon?
     
     private lazy var statsVc: StatsViewController = {
         
@@ -51,12 +53,54 @@ class DetailViewController: UIViewController {
         return viewController
     }()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureView()
+        
+    }
+    
+    func configureView() {
+        guard let myPokemon = pokemon else {
+            return
+        }
+        
+        configureTabBar()
+        configureHeaderView()
+        loadInfoToHeader()
         configureSegmentedControl()
+        configureBackgroundColor()
+        
         addChildVc(statsVc)
+        
+    }
+    
+    func loadInfoToHeader() {
+        labelNamePokemon.text = pokemon?.name!
+        imageViewPokemon.setupImage(photoUrl: pokemon?.spriteFrontDefault)
+        
+    }
+    
+    func configureTabBar() {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func configureHeaderView() {
+        self.headerView.layer.cornerRadius = 40
+        self.headerView.clipsToBounds = true
+    }
+    
+    func configureBackgroundColor() {
+        if let types = pokemon?.types {
+            
+            guard let myType = types.last else{
+                return
+            }
+            
+            if let myColors = myType.getTypeColor() {
+                self.view.setGradientBackground(myColors)
+            }
+        }
     }
 }
 

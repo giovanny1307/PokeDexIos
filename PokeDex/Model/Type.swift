@@ -116,5 +116,62 @@ class Type:Mappable {
                return UIImage(named:"pokemon")
            }
        }
+    
+
+    func getTypeColor() -> [UIColor]? {
+           
+           guard let myType = name else {
+               return nil
+           }
+         
+           switch myType {
+           case "water":
+            return Tools.getGradientColorsArray("#69B9E3", "#559EDF")
+           case "normal":
+            return Tools.getGradientColorsArray("#A3A49E", "#9298A4")
+           case "fighting":
+             return Tools.getGradientColorsArray("#E74347", "#CE4265")
+           case "flying":
+             return Tools.getGradientColorsArray("#A6C2F2", "#90A7DA")
+           case "poison":
+            return Tools.getGradientColorsArray("#C261D4", "#A864C7")
+           case "ground":
+               return Tools.getGradientColorsArray("#D29463", "#DC7545")
+           case "rock":
+              return Tools.getGradientColorsArray("#D7CD90", "#C5B489")
+           case "bug":
+              return Tools.getGradientColorsArray("#C5D86C", "#92BC2C")
+           case "ghost":
+                return Tools.getGradientColorsArray("#7773D4", "#516AAC")
+           case "steel":
+               return Tools.getGradientColorsArray("#58A6AA", "#52869D")
+           case "fire":
+              return Tools.getGradientColorsArray("#FBAE46", "#FB9B51")
+           case "grass":
+                return Tools.getGradientColorsArray("#5AC178", "#5FBC51")
+           case "electric":
+             return Tools.getGradientColorsArray("#FBE273", "#EDD53E")
+           case "psychic":
+                 return Tools.getGradientColorsArray("#FE9F92", "#F66F71")
+           case "ice":
+                 return Tools.getGradientColorsArray("#8CDDD4", "#70CCBD")
+           case "dragon":
+                 return Tools.getGradientColorsArray("#0C69C8", "#0180C7")
+           case "dark":
+               return Tools.getGradientColorsArray("#595761", "#6E7587")
+           case "fairy":
+                 return Tools.getGradientColorsArray("#F3A7E7", "#EC8CE5")
+           default:
+               return nil
+           }
+           
+       }
+    
+    
+   
 }
+
+
+
+ 
 
