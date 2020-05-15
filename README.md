@@ -1,4 +1,4 @@
-# PokeDex Ios
+# PokeDex iOS
 This app is developed as a requiriement for a recruitment test for the position of iOS developer.
 
 # Pending implementations:
