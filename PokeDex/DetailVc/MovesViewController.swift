@@ -8,30 +8,53 @@
 
 import UIKit
 
-class MovesViewController: UIViewController {
-
-      lazy var loaded = false
-
-     override func viewDidLoad() {
-          super.viewDidLoad()
-          loaded = true
-          // Do any additional setup after loading the view.
-      }
+class MovesViewController: BaseStaticTVC {
+    
+    var pokemon:Pokemon?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        hideFooter()
+        self.tableView.allowsSelection  = false
+        loadCells()
+        
+    }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(false)
-        print("moves dissapear")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func loadCells() {
+        
+        
+        guard let myPokemon = pokemon else {
+            return
+        }
+        
+        var colorCell = UIColor.black
+        
+        if let types = myPokemon.types {
+            
+            if let type = types.last, let colors = type.getTypeColor() {
+                colorCell = colors[1]
+            }
+        }
+        
+        if let ab = myPokemon.moves {
+            guard ab.count > 0 else {
+                return
+            }
+        
+            for a in ab {
+                var _:AbilitiesCell = appendRow() {
+                    if let name = a.name {
+                        $0.configure(name, "", colorCell)
+                    }
+                }
+            }
+        }
+        
+        reloadTableView()
     }
-    */
-
+    
 }

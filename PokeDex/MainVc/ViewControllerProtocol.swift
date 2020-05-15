@@ -15,3 +15,6 @@ protocol ViewControllerProtocol:class {
     func hideReloadButton()
     func showError(_ error:String)
 }
+
+
+

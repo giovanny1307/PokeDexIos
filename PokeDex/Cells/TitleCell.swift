@@ -10,9 +10,16 @@ import UIKit
 
 class TitleCell: UITableViewCell {
 
+    @IBOutlet weak var labelTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setTitle(_ title:String, _ color:UIColor) {
+        labelTitle.textColor = color
+        self.labelTitle.text = title
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -15,8 +15,7 @@ class Row {
 
 class BaseStaticTVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    lazy var loaded = false
-    
+
     @IBOutlet var tableView: UITableView!
     var dataSource: [Row] = []
     
@@ -24,10 +23,7 @@ class BaseStaticTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableView.tableFooterView = UIView()
     }
     
-    func setToLoaded() {
-        loaded = true
-    }
-        
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
@@ -52,30 +48,6 @@ class BaseStaticTVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     func reloadTableView() {
         tableView.reloadData()
-    }
-    
-    
-    @discardableResult
-    func insertCells(cells: [UITableViewCell], rows: [Row], completion: (() -> Void)? = nil) -> [IndexPath] {
-        tableView.beginUpdates()
-
-        var indexPaths: [IndexPath] = []
-        
-        cells.forEach { item in
-            let rowNullable = rows.filter { $0.cell === item }.first
-            
-            guard let _ = rowNullable else {
-                return
-            }
-            
-            let indexPath = IndexPath(row: self.dataSource.count, section: 0)
-            indexPaths.append(indexPath)
-        }
-        
-        tableView.insertRows(at: indexPaths, with: .bottom)
-        tableView.endUpdates()
-        
-        return indexPaths
     }
     
 

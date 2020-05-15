@@ -10,15 +10,28 @@ import UIKit
 
 class SpritesCell: UITableViewCell {
 
+    @IBOutlet weak var labelNormal: UILabel!
+    @IBOutlet weak var labelShiny: UILabel!
+    @IBOutlet weak var imgNormal: UIImageView!
+    @IBOutlet weak var imgShiny: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.contentView.layer.cornerRadius = 40
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configure(_ color:UIColor, _ pokemon:Pokemon) {
+        imgNormal.setupImage(photoUrl: pokemon.spriteFrontDefault)
+        imgShiny.setupImage(photoUrl:
+            pokemon.spriteFrontShiny)
+        labelNormal.textColor = color
+        labelShiny.textColor = color
+        
+        
     }
+    
+
     
 }

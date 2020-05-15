@@ -11,7 +11,7 @@ import Alamofire
 
 class PokemonDataService {
     
-    
+
     class func basicRequest(_ path:String) -> DataRequest {
         let finalUrl = ApiPaths.rootUrl+path
         return AF.request(finalUrl)
@@ -22,14 +22,14 @@ class PokemonDataService {
                        method: HTTPMethod = .get,
                        parameters: Parameters? = nil,
                        headers: HTTPHeaders? = nil,
-                       encoder: ParameterEncoding = JSONEncoding.default) -> DataRequest {
+                       encoding: ParameterEncoding = JSONEncoding.default) -> DataRequest {
         
      
         
         return AF.request(url,
                           method: method,
                           parameters: parameters,
-                          encoding: encoder,
+                          encoding: encoding,
                           headers: headers,
                           interceptor: nil)
         

@@ -24,6 +24,8 @@ class Pokemon:Mappable {
     var spriteFrontShiny:String?
     var spriteFrontDefault:String?
     var stats:[Stat]?
+    var speciesUrl:String?
+    var description:String?
     var types:[Type]?
     var weight:Int?
     
@@ -37,6 +39,7 @@ class Pokemon:Mappable {
         moves <- map["moves"]
         spriteFrontShiny <- map["sprites.front_shiny"]
         spriteFrontDefault <- map ["sprites.front_default"]
+        speciesUrl <- map["species.url"]
         stats <- map ["stats"]
         types <- map ["types"]
         weight <- map["weight"]
@@ -65,7 +68,7 @@ class Pokemon:Mappable {
         var errorDispatch:String?
         
         PokemonDataService
-            .request(ApiPaths.pokemons,parameters: params,encoder: URLEncoding(destination: .queryString)).responseArray(queue: .global(qos: .userInitiated), keyPath: "results", context: nil) {
+            .request(ApiPaths.pokemons,parameters: params,encoding: URLEncoding(destination: .queryString)).responseArray(queue: .global(qos: .userInitiated), keyPath: "results", context: nil) {
                 
                 (response:DataResponse<[Pokemon],AFError>) in
                 
@@ -127,7 +130,6 @@ class Pokemon:Mappable {
         PokemonDataService.request(url).validate().responseObject { (response:DataResponse<Pokemon,AFError>) in
             
             if let error = response.error?.errorDescription {
-                print(error)
                 complete(nil,error)
                 return
             }
@@ -135,7 +137,90 @@ class Pokemon:Mappable {
             if let pokemon = response.value {
                 complete(pokemon,nil)
             }
+        }
+    }
+    
+    func getPokemonSpeciesInfo(complete:@escaping(String?) -> Void) {
+        guard let url = self.speciesUrl else {
+            complete("no species url")
+            return
+        }
+        
+        PokemonDataService.request(url).validate().responseJSON { (response) in
+            guard response.error == nil else {
+                complete(response.error?.errorDescription)
+                return
+            }
             
+            guard let dictionary = response.value as? [String:Any] else {
+                complete("error in species response")
+                return
+            }
+          
+            guard let innerArray = dictionary["flavor_text_entries"] as? [Any] else {
+                complete("error in species response")
+                return
+            }
+            
+            guard let innerDictionary = innerArray[1] as? [String:Any] else {
+                complete("error in species response")
+                return
+            }
+            
+            guard let mySpeciesDescription = innerDictionary["flavor_text"] as? String else {
+                complete("error in species response")
+                return
+            }
+            
+            self.description = mySpeciesDescription
+            complete(nil)
+        }
+        
+    }
+    
+    
+    func getPokemonAbilities(complete:@escaping([Ability]?,String?) -> Void) {
+        
+        
+        guard let abilities = self.abilities else {
+            complete(nil,"the pokemon has no abilites")
+            return
+        }
+        
+        let dGroup = DispatchGroup()
+        var abilityResponse = [Ability]()
+        var dError:String?
+        
+        for ability in abilities {
+            
+            guard let _ = ability.url else {
+                complete(nil,"the url is not found")
+                return
+            }
+            dGroup.enter()
+            
+            ability.getAbilityDetails { (abilityUpd, error) in
+                
+                guard error == nil else {
+                    dError = error
+                    dGroup.leave()
+                    return }
+                
+                if let myAbility = abilityUpd {
+                    abilityResponse.append(myAbility)
+                    dGroup.leave()
+                }
+           
+            }
+        }
+        
+        dGroup.notify(queue: .main) {
+            if let disError = dError  {
+                complete(nil,disError)
+            } else {
+                self.abilities = abilityResponse
+                complete(abilityResponse,dError)
+            }
         }
     }
 }

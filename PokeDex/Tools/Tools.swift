@@ -38,4 +38,8 @@ class Tools {
         return [Tools.hexStringToUIColor(hex: hexColorStart),
                 Tools.hexStringToUIColor(hex: hexColorEnd)]
     }
+    
+    class func myPrintTool(_ message:Any, _ value:Any) {
+        print("\n\(message) => \(value)\n")
+    }
 }

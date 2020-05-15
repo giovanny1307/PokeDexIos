@@ -26,11 +26,12 @@
 		9D9C518B246DEAB600AA1D1B /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D9C5189246DEAB600AA1D1B /* TitleCell.xib */; };
 		9D9C5190246DEAE200AA1D1B /* EvolutionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C518E246DEAE200AA1D1B /* EvolutionCell.swift */; };
 		9D9C5191246DEAE200AA1D1B /* EvolutionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D9C518F246DEAE200AA1D1B /* EvolutionCell.xib */; };
-		9D9C5194246DEAF500AA1D1B /* MovesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C5192246DEAF500AA1D1B /* MovesCell.swift */; };
-		9D9C5195246DEAF500AA1D1B /* MovesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D9C5193246DEAF500AA1D1B /* MovesCell.xib */; };
 		9D9C5198246DEB1800AA1D1B /* SpritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C5196246DEB1800AA1D1B /* SpritesCell.swift */; };
 		9D9C5199246DEB1800AA1D1B /* SpritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D9C5197246DEB1800AA1D1B /* SpritesCell.xib */; };
-		9DAB35EC246C1D0B0057BD74 /* Abilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB35EB246C1D0B0057BD74 /* Abilities.swift */; };
+		9D9C519B246E028B00AA1D1B /* PokemonDetailsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C519A246E028B00AA1D1B /* PokemonDetailsApi.swift */; };
+		9D9C519D246E17D800AA1D1B /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C519C246E17D800AA1D1B /* Species.swift */; };
+		9D9C519F246E1AD300AA1D1B /* StatsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C519E246E1AD300AA1D1B /* StatsPresenter.swift */; };
+		9DAB35EC246C1D0B0057BD74 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB35EB246C1D0B0057BD74 /* Ability.swift */; };
 		9DAB35EE246C22BE0057BD74 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB35ED246C22BE0057BD74 /* Move.swift */; };
 		9DAB35F0246C24940057BD74 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB35EF246C24940057BD74 /* Stat.swift */; };
 		9DAB35F2246C25440057BD74 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAB35F1246C25440057BD74 /* Type.swift */; };
@@ -91,11 +92,12 @@
 		9D9C5189246DEAB600AA1D1B /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		9D9C518E246DEAE200AA1D1B /* EvolutionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvolutionCell.swift; sourceTree = "<group>"; };
 		9D9C518F246DEAE200AA1D1B /* EvolutionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvolutionCell.xib; sourceTree = "<group>"; };
-		9D9C5192246DEAF500AA1D1B /* MovesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesCell.swift; sourceTree = "<group>"; };
-		9D9C5193246DEAF500AA1D1B /* MovesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovesCell.xib; sourceTree = "<group>"; };
 		9D9C5196246DEB1800AA1D1B /* SpritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpritesCell.swift; sourceTree = "<group>"; };
 		9D9C5197246DEB1800AA1D1B /* SpritesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpritesCell.xib; sourceTree = "<group>"; };
-		9DAB35EB246C1D0B0057BD74 /* Abilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abilities.swift; sourceTree = "<group>"; };
+		9D9C519A246E028B00AA1D1B /* PokemonDetailsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsApi.swift; sourceTree = "<group>"; };
+		9D9C519C246E17D800AA1D1B /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		9D9C519E246E1AD300AA1D1B /* StatsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPresenter.swift; sourceTree = "<group>"; };
+		9DAB35EB246C1D0B0057BD74 /* Ability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
 		9DAB35ED246C22BE0057BD74 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		9DAB35EF246C24940057BD74 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		9DAB35F1246C25440057BD74 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
@@ -254,10 +256,11 @@
 			isa = PBXGroup;
 			children = (
 				9DDE583C246B3A3A00660709 /* Pokemon.swift */,
-				9DAB35EB246C1D0B0057BD74 /* Abilities.swift */,
+				9DAB35EB246C1D0B0057BD74 /* Ability.swift */,
 				9DAB35ED246C22BE0057BD74 /* Move.swift */,
 				9DAB35EF246C24940057BD74 /* Stat.swift */,
 				9DAB35F1246C25440057BD74 /* Type.swift */,
+				9D9C519C246E17D800AA1D1B /* Species.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				9DCACB1B246B1C23005BAA01 /* ApiPaths.swift */,
+				9D9C519A246E028B00AA1D1B /* PokemonDetailsApi.swift */,
 				9DEC113D246B16D10088C8D2 /* PokemonDataService.swift */,
 			);
 			path = Networking;
@@ -286,8 +290,6 @@
 				9D9C5189246DEAB600AA1D1B /* TitleCell.xib */,
 				9D9C518E246DEAE200AA1D1B /* EvolutionCell.swift */,
 				9D9C518F246DEAE200AA1D1B /* EvolutionCell.xib */,
-				9D9C5192246DEAF500AA1D1B /* MovesCell.swift */,
-				9D9C5193246DEAF500AA1D1B /* MovesCell.xib */,
 				9D9C5196246DEB1800AA1D1B /* SpritesCell.swift */,
 				9D9C5197246DEB1800AA1D1B /* SpritesCell.xib */,
 			);
@@ -301,6 +303,7 @@
 				9D9C516D246D973600AA1D1B /* StatsViewController.swift */,
 				9D9C516F246D974300AA1D1B /* EvoViewController.swift */,
 				9D9C5171246D975100AA1D1B /* MovesViewController.swift */,
+				9D9C519E246E1AD300AA1D1B /* StatsPresenter.swift */,
 			);
 			path = DetailVc;
 			sourceTree = "<group>";
@@ -428,7 +431,6 @@
 				9D9C5185246DEA1800AA1D1B /* AbilitiesCell.xib in Resources */,
 				9DDE5841246B67E000660709 /* Main.storyboard in Resources */,
 				9D9C517D246DE9D200AA1D1B /* DescriptionCell.xib in Resources */,
-				9D9C5195246DEAF500AA1D1B /* MovesCell.xib in Resources */,
 				9DFF51C7246C4A94003A139A /* PokemonCell.xib in Resources */,
 				9DB044CE246B03400044D33C /* LaunchScreen.storyboard in Resources */,
 				9D9C5191246DEAE200AA1D1B /* EvolutionCell.xib in Resources */,
@@ -569,6 +571,7 @@
 				9D9C5184246DEA1800AA1D1B /* AbilitiesCell.swift in Sources */,
 				9DFF51C6246C4A94003A139A /* PokemonCell.swift in Sources */,
 				9D9C5198246DEB1800AA1D1B /* SpritesCell.swift in Sources */,
+				9D9C519F246E1AD300AA1D1B /* StatsPresenter.swift in Sources */,
 				9D9C5172246D975100AA1D1B /* MovesViewController.swift in Sources */,
 				9D9C518A246DEAB600AA1D1B /* TitleCell.swift in Sources */,
 				9DAB35F5246C33BA0057BD74 /* ViewControllerPresenter.swift in Sources */,
@@ -576,9 +579,10 @@
 				9DB044C6246B033B0044D33C /* ViewController.swift in Sources */,
 				9D9C5190246DEAE200AA1D1B /* EvolutionCell.swift in Sources */,
 				9D9C5175246DAEC800AA1D1B /* SeguesTool.swift in Sources */,
-				9DAB35EC246C1D0B0057BD74 /* Abilities.swift in Sources */,
+				9DAB35EC246C1D0B0057BD74 /* Ability.swift in Sources */,
 				9DB044C2246B033B0044D33C /* AppDelegate.swift in Sources */,
 				9DAB35F2246C25440057BD74 /* Type.swift in Sources */,
+				9D9C519B246E028B00AA1D1B /* PokemonDetailsApi.swift in Sources */,
 				9DAB35EE246C22BE0057BD74 /* Move.swift in Sources */,
 				9DEC113E246B16D10088C8D2 /* PokemonDataService.swift in Sources */,
 				9D9C5170246D974300AA1D1B /* EvoViewController.swift in Sources */,
@@ -588,7 +592,7 @@
 				9DFF51C9246C5A47003A139A /* Extensions.swift in Sources */,
 				9D9C517C246DE9D200AA1D1B /* DescriptionCell.swift in Sources */,
 				9D9C5180246DE9FD00AA1D1B /* StatsCell.swift in Sources */,
-				9D9C5194246DEAF500AA1D1B /* MovesCell.swift in Sources */,
+				9D9C519D246E17D800AA1D1B /* Species.swift in Sources */,
 				9D9C5177246DBB8700AA1D1B /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

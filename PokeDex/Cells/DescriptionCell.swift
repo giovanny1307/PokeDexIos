@@ -10,6 +10,15 @@ import UIKit
 
 class DescriptionCell: UITableViewCell {
 
+    @IBOutlet weak var imageDescType: UIImageView!
+    @IBOutlet weak var descPoke: UILabel!
+    
+    var pokemon: Pokemon? {
+          didSet {
+              configureCell()
+          }
+      }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +28,27 @@ class DescriptionCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCell() {
+        
+        if let desc = pokemon?.description {
+            descPoke.text = desc
+        }
+        
+        setTypeImages()
+    }
+    
+    func setTypeImages() {
+        
+        guard let types = pokemon?.types else {
+            return
+        }
+        
+        if let t = types.last, let type1Img = t.getTypeLargeIcon() {
+            imageDescType.image = type1Img
+        }
+
     }
     
 }
