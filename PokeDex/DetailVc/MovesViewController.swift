@@ -33,12 +33,6 @@ class MovesViewController: BaseStaticTVC {
         
         var colorCell = UIColor.black
         
-        if let types = myPokemon.types {
-            
-            if let type = types.last, let colors = type.getTypeColor() {
-                colorCell = colors[1]
-            }
-        }
         
         if let ab = myPokemon.moves {
             guard ab.count > 0 else {
