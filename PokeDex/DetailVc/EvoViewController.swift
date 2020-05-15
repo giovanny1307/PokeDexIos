@@ -8,24 +8,14 @@
 
 import UIKit
 
-class EvoViewController: UIViewController {
+class EvoViewController: BaseStaticTVC {
 
-      lazy var loaded = false
-
+   var pokemon:Pokemon?
+      
       override func viewDidLoad() {
           super.viewDidLoad()
-          loaded = true
-          // Do any additional setup after loading the view.
+          Tools.myPrintTool("From Evo, pokemon name=> ?", pokemon?.name)
+          hideFooter()
       }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
